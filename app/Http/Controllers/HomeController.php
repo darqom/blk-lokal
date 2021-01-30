@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $files = DataFile::get();
+        return view('home', compact('files'));
     }
 }
