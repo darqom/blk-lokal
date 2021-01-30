@@ -48,11 +48,11 @@
                 </div>
 
                 <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="password" class="form-control form-control-xl" placeholder="Konfirmasi" @error('new-password') is-invalid @enderror value="{{ old('new-password') }}" name="new-password">
+                    <input type="password" class="form-control form-control-xl" placeholder="Konfirmasi" @error('password_confirmation') is-invalid @enderror value="{{ old('password_confirmation') }}" name="password_confirmation">
                     <div class="form-control-icon">
                         <i class="bi bi-key"></i>
                     </div>
-                    @error('new-password')
+                    @error('password_confirmation')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -67,3 +67,4 @@
     </div>
 </div>
 @endsection
+
